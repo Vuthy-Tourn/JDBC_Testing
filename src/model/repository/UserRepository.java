@@ -107,14 +107,13 @@ public class UserRepository implements Repository<User,Integer>{
         if(user!=null){
             String sql = """
                     UPDATE users
-                    SET user_name = ? , created_date = ?
+                    SET user_name = ?
                     WHERE uuid = ?
                     """;
             try(Connection con = getDatabaseConnection()){
                 PreparedStatement ps = con.prepareStatement(sql);
                 ps.setString(1,updateUserDto.userName());
-                ps.setDate(2,updateUserDto.createdDate());
-                ps.setString(3, uuid);
+                ps.setString(2, uuid);
                 int rowsAffected = ps.executeUpdate();
                 if(rowsAffected>0){
                     return findByUserUuid(uuid);
