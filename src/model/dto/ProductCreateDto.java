@@ -1,9 +1,9 @@
 package model.dto;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public record ProductCreateDto(
         String pName,
-        LocalDate expiredDate
+        Date expiredDate
 ) {
 }

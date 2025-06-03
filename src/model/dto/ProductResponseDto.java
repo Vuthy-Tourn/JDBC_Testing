@@ -1,10 +1,10 @@
 package model.dto;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public record ProductResponseDto(
         String uuid,
         String pName,
-        LocalDate expiredDate
+        Date expiredDate
 ) {
 }

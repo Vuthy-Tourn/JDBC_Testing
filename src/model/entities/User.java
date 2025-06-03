@@ -5,14 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
-import java.time.LocalDate;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+@Data
+public class User {
     private Integer id;
     private String uuid;
-    private String pName;
-    private Date expiredDate;
+    private String userName;
+    private String email;
+    private String password;
+    private Date createdDate;
 }
